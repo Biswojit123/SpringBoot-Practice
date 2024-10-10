@@ -1,0 +1,34 @@
+#inject the verity value fro the yml file to the bean level
+com:
+   biswo:
+      #Simple value inject
+      empId: 3456
+      empName: Biswojit jena
+      #Inject array values
+      favColors:
+         - red
+         - green
+         - blue	
+         - orange
+      #inject the list collection 
+      nick-names:
+         - Jagau
+         - Manas
+         - Ritesh	
+         - Subha
+      #inject the set colection
+      mobile-no:
+         - 456456456
+         - 888888856
+         - 656356856
+      #injecting the map collection
+      id-details:
+         voterId: 256398
+         adharId: 2563GHK
+         passport: 566332
+      #For HSA-A properties	
+      company:
+         companyId: 568956
+         companyName: RSB
+         companyAddress: Bengaluru
+         companySize: 20			 				 				 					 				 											 				 											 				 			 				 	
