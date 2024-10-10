@@ -1,0 +1,7 @@
+#This is the Customer properties
+com:
+   biswo:
+      custNo: 23105
+      custName: Biswojit Jena
+      custAdd: Tichhini
+      billAmt: 200.0  
