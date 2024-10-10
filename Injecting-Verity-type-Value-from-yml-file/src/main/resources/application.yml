@@ -4,23 +4,29 @@ com:
       #Simple value inject
       empId: 3456
       empName: Biswojit jena
-      #Inject array values
-      favColors:
-         - red
-         - green
-         - blue	
-         - orange
-      #inject the list collection 
-      nick-names:
-         - Jagau
-         - Manas
-         - Ritesh	
-         - Subha
-      #inject the set colection
-      mobile-no:
-         - 456456456
-         - 888888856
-         - 656356856
+#Inject array values through the inline or index type
+#This is the index like inject value
+      favColors: [red,blue,green,orange]
+#This is the index like inject value
+#         - red
+#         - green
+#         - blue	
+#         - orange
+#inject the list collection through the inline or index type
+#this is inline type inject value			
+      nick-names: [tophan,ajit,ram]
+#This is the index like inject value
+#         - Jagau
+#         - Manas
+#         - Ritesh	
+#         - Subha
+#inject the set colection value through the inline or index type
+#this is inline type inject value
+      mobile-no: [4556612,5656358,7894556]
+#This is the index like inject value
+#         - 456456456
+#         - 888888856
+#         - 656356856
       #injecting the map collection
       id-details:
          voterId: 256398
