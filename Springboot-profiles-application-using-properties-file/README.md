@@ -1,45 +1,61 @@
-**Edit a file, create a new file, and clone from Bitbucket in under 2 minutes**
+Profiles in Spring Boot
+===========================
+-> Both Spring and Spring Boot support profiles.
+-> We work with profiles while developing Spring applications using:
+      a) XML-driven configurations
+      b) XML + annotation-driven configurations
+      c) 100% code-driven configurations
+      d) Spring Boot
+-> The setup required to execute the application is called the environment. This environment includes compiled code + database software + server + DataSource + JRE/JVM, and so on.
 
-When you're done, you can delete the content in this README and update the file with details for others getting started with your repository.
+#Note: This environment is also called a profile. These are like Netflix, Amazon Prime profiles, which keep track of various activities of the user, such as movie watching history, watch list, recommendations, etc.
 
-*We recommend that you open this README in another tab as you perform the tasks below. You can [watch our video](https://youtu.be/0ocf7u76WSo) for a full demo of all the steps in this tutorial. Open the video in a new tab to avoid leaving Bitbucket.*
+-> As part of project development to project production, we need different environments/profiles, such as:
 
----
+a) Profile/environment for development
+b) Profile/environment for testing
+c) Profile/environment for UAT (User Acceptance Testing at the client organization)
+d) Profile/environment for production
 
-## Edit a file
+Environments for Different Profiles
+===================================
+ 1.Proj1 - Dev
+     Profile
+     
+         a. MySQL database software
+         b. Tomcat server
+         c. Apache DBCP2
 
-You’ll start by editing this README file to learn how to edit a file in Bitbucket.
+ 2.Proj1 - Testing
+    Profile
+    
+         a. MySQL database software
+         b. Tomcat server
+         c. C3P0 DataSource
+          
+-> At software company (It can be done using a local setup or cloud setup like AWS/Azure/GCP, etc.)
 
-1. Click **Source** on the left side.
-2. Click the README.md link from the list of files.
-3. Click the **Edit** button.
-4. Delete the following text: *Delete this line to make a change to the README from Bitbucket.*
-5. After making your change, click **Commit** and then **Commit** again in the dialog. The commit page will open and you’ll see the change you just made.
-6. Go back to the **Source** page.
+3.Proj1 - UAT
+  Profile
+  
+         a. Oracle database
+         b. Tomcat server
+         c. Oracle UCP
 
----
+4.Proj1 - Production
+  Profile
+  
+         a. Oracle database
+         b. WildFly server
+         c. HikariCP
 
-## Create a file
+Technology Used
+===============
+1. Spring Boot
+2. Java
+3. Maven tools
+4. Spring Framework
 
-Next, you’ll add a new file to this repository.
-
-1. Click the **New file** button at the top of the **Source** page.
-2. Give the file a filename of **contributors.txt**.
-3. Enter your name in the empty file space.
-4. Click **Commit** and then **Commit** again in the dialog.
-5. Go back to the **Source** page.
-
-Before you move on, go ahead and explore the repository. You've already seen the **Source** page, but check out the **Commits**, **Branches**, and **Settings** pages.
-
----
-
-## Clone a repository
-
-Use these steps to clone from SourceTree, our client for using the repository command-line free. Cloning allows you to work on your files locally. If you don't yet have SourceTree, [download and install first](https://www.sourcetreeapp.com/). If you prefer to clone from the command line, see [Clone a repository](https://confluence.atlassian.com/x/4whODQ).
-
-1. You’ll see the clone button under the **Source** heading. Click that button.
-2. Now click **Check out in SourceTree**. You may need to create a SourceTree account or log in.
-3. When you see the **Clone New** dialog in SourceTree, update the destination path and name if you’d like to and then click **Clone**.
-4. Open the directory you just created to see your repository’s files.
-
-Now that you're more familiar with your Bitbucket repository, go ahead and add a new file locally. You can [push your change back to Bitbucket with SourceTree](https://confluence.atlassian.com/x/iqyBMg), or you can [add, commit,](https://confluence.atlassian.com/x/8QhODQ) and [push from the command line](https://confluence.atlassian.com/x/NQ0zDQ).
+Output
+======
+![Screenshot 2024-10-17 152623](https://github.com/user-attachments/assets/d750d283-64e9-4ea7-93c3-b144d4b7bd0e)
