@@ -1,0 +1,14 @@
+#Specify the data base(Here use the Oracle database) for user acceptance profile.
+spring:
+   datasource:
+      driver-class-name: oracle.jdbc.OracleDriver
+      url: jdbc:oracle:thin:@localhost:1521:xe
+      username: system
+      password: Biswojit
+      oracleucp:
+         initial-pool-size: 10
+         max-pool-size: 100
+         connection-wait-timeout: 60000
+
+#Specify the data source type(Here use the Oracle-Ucp data source)
+      type: oracle.ucp.jdbc.PoolDataSourceImpl

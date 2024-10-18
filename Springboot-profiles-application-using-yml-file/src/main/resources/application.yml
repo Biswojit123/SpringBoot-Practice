@@ -1,0 +1,4 @@
+#Active the profile in application properties file
+spring:
+   profiles:
+      active: prod

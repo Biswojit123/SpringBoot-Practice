@@ -1,0 +1,11 @@
+#Specify the database(Here used oracle database) for the production profile
+spring:
+   datasource:
+      driver-class-name: oracle.jdbc.OracleDriver
+      url: jdbc:oracle:thin:@localhost:1521:xe
+      username: system
+      password: Biswojit
+      hikari:
+         minimum-idle: 10
+         maximum-pool-size: 100
+         connection-timeout: 60000

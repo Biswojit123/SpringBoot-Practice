@@ -1,0 +1,15 @@
+#Specify the database(Here we use the Mysql database) for testing profile
+spring:
+   application:
+      name: Springboot-profiles-application
+   datasource:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/spring_boot
+      username: root
+      password: Bishnu@123
+
+c3p0:
+   minsize: 10
+   maxsize: 100
+
+#Here we specify the data source that is C3P0 that already add to the test profile
