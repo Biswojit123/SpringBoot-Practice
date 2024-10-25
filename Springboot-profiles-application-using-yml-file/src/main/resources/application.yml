@@ -1,4 +1,19 @@
 #Active the profile in application properties file
 spring:
    profiles:
-      active: prod
+      active: 
+#If the paticular profile is not find then it execute the application.yml file and there 
+#we specify the include properties so we can place any other profike that place
+      include: prod 
+#spring:
+#   datasource:
+#      driver-class-name: com.mysql.cj.jdbc.Driver
+#      url: jdbc:mysql://localhost:3306/spring_boot
+#      username: root
+#      password: Bishnu@123
+#      dbcp2:
+#         min-idle: 10
+#         max-total: 100
+#         max-wait-millis: 60000
+##Sepcify the datasource(dbcp2 data source used) in the dev-profile
+#      type: org.apache.commons.dbcp2.BasicDataSource

@@ -17,7 +17,9 @@ import com.biswo.dao.inter.IMEmployeeDao;
 import com.biswo.entity.Employee;
 
 @Repository
-@Profile({"dev","test"})
+//If we not specify the any profile then by default the This class object will created
+//So we have to declare the "Default" in profile level
+@Profile({"dev","test","default"})
 public class MySqlImpEmployeeDao implements IMEmployeeDao {
 	// Auto wired the DataSources object it contain the all database information
 	// using that we can get the connection object
