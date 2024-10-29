@@ -2,6 +2,7 @@ package com.biswo.service;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,5 +40,36 @@ public class ImpServiceActors implements InterActorsService {
 		List<Integer> id = listActors.stream().map(actors -> actors.getActorId()).collect(Collectors.toList());
 		return listActors.size()+" Objects are saved having id :"+id;
 	}
-
+	@Override
+	public Long countNumOfRecord() {
+		Long numRecord = repository.count();
+		return numRecord;
+	}
+	@Override
+	public Iterable<Actors> fetchAllActors() {
+		Iterable<Actors> allActors = repository.findAll();
+		return allActors;
+	}
+	@Override
+	public boolean isIdExist(int id) {
+		boolean isExits = repository.existsById(id);
+		return isExits;
+	}
+	@Override
+	public Iterable<Actors> fetchActorsById(Iterable<Integer> ids) {
+		Iterable<Actors> actors = repository.findAllById(ids);
+		return actors;
+	}
+	@Override
+	public Optional<Actors> fetchActorById(int id) {
+		Optional<Actors> actor = repository.findById(id);
+		return actor;
+	}
+	@Override
+	public Actors fetchsActorById(int id) {
+		Optional<Actors> actors = repository.findById(id);
+		Actors actor = actors.orElse(new Actors());
+		//Actors actor = actors.orElseThrow(() -> new IllegalArgumentException("Actors not found"));
+		return actor;
+	}
 }
