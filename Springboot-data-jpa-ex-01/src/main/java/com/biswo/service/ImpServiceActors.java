@@ -72,4 +72,77 @@ public class ImpServiceActors implements InterActorsService {
 		//Actors actor = actors.orElseThrow(() -> new IllegalArgumentException("Actors not found"));
 		return actor;
 	}
+	//Partial update of actor
+	@Override
+	public String updateActorMobileNo(int id, Long mobileNum) {
+		//load object by id
+		Actors actor = repository.findById(id).orElse(new Actors());
+		if(actor.getActorId() == id) {
+			actor.setMobileNum(mobileNum);
+			repository.save(actor);
+			return actor.getActorId()+" Actor mobile number update successfully";
+		}else
+		 return id+" Actor is not found..";
+	}
+	//Fully Actor Update 
+	@Override
+	public String updateActor(Actors actor) {
+		Actors actors = repository.findById(actor.getActorId()).orElse(new Actors());
+		if(actors.getActorId() == actor.getActorId()) {
+			//set the all value to the actors
+			actors.setActorName(actor.getActorName());
+			actors.setActorCategory(actor.getActorCategory());
+			actors.setMobileNum(actor.getMobileNum());
+			repository.save(actors);
+			return actor.getActorId()+" Actor Update Successfully...";
+		}else
+		 return actor.getActorId()+" Actor not found.....";
+	}
+	@Override
+	public String UpdateOrInsertIfExist(Actors actor) {
+		Actors actors = repository.findById(actor.getActorId()).orElse(new Actors());
+		if(actors.getActorId() == actor.getActorId()) {
+			//set the all value to the actors
+			actors.setActorName(actor.getActorName());
+			actors.setActorCategory(actor.getActorCategory());
+			actors.setMobileNum(actor.getMobileNum());
+			repository.save(actors);
+			return actor.getActorId()+" Actor Update or Created Successfully...";
+		}else
+			//It perform the both update and insert operation when i comment the generated id annotation in Actors level
+			repository.save(actor);
+		return actor.getActorId()+" Actor Update Or Created Successfully....";
+	}
+	@Override
+	public String deleteActorById(int id) {
+		//get the Record actually present or not
+		boolean isPresent = repository.existsById(id);
+		if(isPresent) {
+			repository.deleteById(id);
+			return id+" Actor is deleted successfully.....";
+		}else
+			return id+" Actor is not present....";
+	}
+	@Override
+	public String deleteActor(Actors actor) {
+		//check the Actor is available or not
+		Actors actors = repository.findById(actor.getActorId()).orElse(new Actors());
+		if(actor.getActorId().equals(actors.getActorId())) {
+			repository.delete(actors);
+			return actors.getActorId()+" Actor deleted successfullly...";
+		}else {
+			return actor.getActorId()+" Actor is not found......";
+		}
+	}
+	@Override
+	public String removeActorById(int id) {
+		repository.deleteById(id);
+		return id+" Actor Deleted Successfully...";
+	}
+	@Override
+	public String removeAllActors(List<Integer> ids) {
+		//Get the 
+		repository.deleteAllById(ids);
+		return ids.size()+" no fo record deleted successfully....";
+	}
 }

@@ -167,7 +167,7 @@ public class SpringbootDataJpaEx01Application {
 		return clr6;
 	}
 	
-	@Bean 
+	//@Bean 
 	public ApplicationRunner getRunner() {
 		ApplicationRunner clr7 = (ApplicationArguments args)-> {
 			Iterable<Actors> actors = service.fetchActorsById(List.of(1,2,302,202,352));
@@ -202,7 +202,73 @@ public class SpringbootDataJpaEx01Application {
 		};
 		return clr7;
 	}
-
+	//Update Operation perform i.e partial update
+	//@Bean
+	public ApplicationRunner getRunner1() {
+		ApplicationRunner clr7 = (ApplicationArguments args)-> {
+			String mesg = service.updateActorMobileNo(102, 82602934l);
+			System.out.println(mesg);
+		};
+		return clr7;
+	}
+	//Fully Update 
+	//@Bean
+	public ApplicationRunner getRunner2() {
+		ApplicationRunner clr7 = (ApplicationArguments args)-> {
+			Actors actor = new Actors("Anuska","Heroine",7077018081l);
+			actor.setActorId(102);
+			String mesg = service.updateActor(actor);
+			System.out.println(mesg);
+		};
+		return clr7;
+	}
+	//if Actor exist simple update other wise insert
+	//@Bean
+	public ApplicationRunner getRunner3() {
+		ApplicationRunner clr7 = (ApplicationArguments args)-> {
+			Actors actor = new Actors("Sarukhan","Hero",925635895l);
+			actor.setActorId(111);
+			String mesg = service.UpdateOrInsertIfExist(actor);
+			System.out.println(mesg);
+		};
+		return clr7;
+	}
+	//We want to delete the object
+	//@Bean
+	public ApplicationRunner getRunner4() {
+		ApplicationRunner clr8 = (ApplicationArguments args) -> {
+			String delMsg = service.deleteActorById(252);
+			System.out.println(delMsg);
+		};
+		return clr8;
+	}
+	//@Bean
+	public ApplicationRunner getRunner5() {
+		ApplicationRunner clr8 = (ApplicationArguments args) -> {
+			//create the Actors object
+			Actors actor = new Actors();
+			actor.setActorId(202);
+			String delMsg = service.deleteActor(actor);
+			System.out.println(delMsg);
+		};
+		return clr8;
+	}
+	//@Bean
+	public ApplicationRunner getRunner6() {
+		ApplicationRunner clr8 = (ApplicationArguments args) -> {
+			String delMsg = service.removeActorById(152);
+			System.out.println(delMsg);
+		};
+		return clr8;
+	}
+	@Bean
+	public ApplicationRunner getRunner7() {
+		ApplicationRunner clr8 = (ApplicationArguments args) -> {
+			String delMsg = service.removeAllActors(List.of(352,353,52));
+			System.out.println(delMsg);
+		};
+		return clr8;
+	}
 	public static void main(String[] args) {
 		// IOC container
 		SpringApplication.run(SpringbootDataJpaEx01Application.class, args);
