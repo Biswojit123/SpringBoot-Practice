@@ -1,0 +1,25 @@
+2024-11-15 14:24:09 INFO  c.b.SpringbootLoggingImplementationApplication - Starting SpringbootLoggingImplementationApplication using Java 21.0.4 with PID 10316 (D:\Spring Boot Practice\Springboot-logging-implementation\target\classes started by biswo in D:\Spring Boot Practice\Springboot-logging-implementation)
+2024-11-15 14:24:09 INFO  c.b.SpringbootLoggingImplementationApplication - No active profile set, falling back to 1 default profile: "default"
+2024-11-15 14:24:09 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-15 14:24:09 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-11-15 14:24:10 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-11-15 14:24:10 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-15 14:24:10 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-11-15 14:24:10 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-15 14:24:10 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-11-15 14:24:10 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 693 ms
+2024-11-15 14:24:10 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-11-15 14:24:10 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-15 14:24:10 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-11-15 14:24:10 INFO  c.b.SpringbootLoggingImplementationApplication - Started SpringbootLoggingImplementationApplication in 1.287 seconds (process running for 2.04)
+2024-11-15 14:24:52 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-15 14:24:52 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-11-15 14:24:52 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-11-15 14:24:52 INFO  com.biswo.controller.UserController - Welcome() method execution started.....
+2024-11-15 14:24:52 WARN  com.biswo.controller.UserController - Waring is zero divided by 20..........
+2024-11-15 14:24:52 INFO  com.biswo.controller.UserController - Welcome() method execution ended.........
+2024-11-15 14:25:07 INFO  com.biswo.controller.UserController - greeting() method execution started........
+2024-11-15 14:25:07 WARN  com.biswo.controller.UserController - Waring is we can't perfrom the any operation on null value........
+2024-11-15 14:25:07 INFO  com.biswo.controller.UserController - Greeting() method execution ended...........
+2024-11-15 18:05:19 INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-11-15 18:05:19 INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
